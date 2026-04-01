@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=EG+Garamond:wght@400;500;600;700&family=Fira+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+        <link rel = "stylesheet" href ="pomo.css"/>
+
+        <title>Pomodoro Timer</title>
+    </head>
+
+    <body>
+        <div class = "timer-container">
+            <h1>Pomodoro Timer</h1>
+            <div class = "timer-message">Press Start to Begin</div>
+            <div class="timer-circle">
+                <div class="circle-shape">
+                    <div class="semi-circle right-side circle-mask"></div>
+                    <div class="semi-circle right-side circle"></div>
+                    <div class="semi-circle left-side circle-mask"></div>
+                    <div class="semi-circle left-side circle"></div>
+                </div>
+
+                <div class="timer-counter-box">
+                    <p><span class="minutes">25</span>:<span class="seconds">00</span></p>
+                </div>
+
+                <button class="start-button">Start</button>
+            </div>
+        </div>
+            
+    </body>
+
+    <script src = "pomo.js"></script>
+</html>

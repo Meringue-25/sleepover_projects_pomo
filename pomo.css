@@ -87,3 +87,26 @@ p {
     border-color: pink;
   }
 
+  .app-counter-box {
+    font-family: "Droid Sans Mono", monospace;
+    font-size: 250%;
+    position: relative;
+    top: 50px;
+    color: #d8e9ef;
+  }
+  
+  button {
+    position: relative;
+    top: 50px;
+    font-size: 80%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    background: none;
+    outline: none;
+    color: #d8e9ef;
+  }
+  
+  button:hover {
+    color: #90c0d1;
+  }

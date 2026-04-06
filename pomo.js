@@ -1,17 +1,19 @@
 const bells = new Audio("./sounds/bell.wav");
-const startBtn = document.querySelector(".btn-start");
-const session = document.querySelector(".minutes");
+const startBtn = document.querySelector(".start-button");
+const minuteDiv = document.querySelector(".minutes");
+const secondDiv = document.querySelector(".seconds");
+
 let myInterval;
 let state = true;
+let totalSeconds;
 
 const Timer = () => {
-  const sessionAmount = Number.parseInt(session.textContent);
+  const sessionAmount = Number.parseInt(minuteDiv.textContent);
 
   if (state) {
     state = false;
-    let totalSeconds = sessionAmount * 60;
+    totalSeconds = sessionAmount * 60;
 
-    const updateSeconds = () => {};
     myInterval = setInterval(updateSeconds, 1000);
   } else {
     alert("Session has already been started.");
@@ -19,22 +21,15 @@ const Timer = () => {
 };
 
 const updateSeconds = () => {
-  const minuteDiv = document.querySelector(".minutes");
-  const secondDiv = document.querySelector(".seconds");
-
   totalSeconds--;
 
   let minutesLeft = Math.floor(totalSeconds / 60);
   let secondsLeft = totalSeconds % 60;
 
-  if (secondsLeft < 10) {
-    secondDiv.textContent = "0" + secondsLeft;
-  } else {
-    secondDiv.textContent = secondsLeft;
-  }
   minuteDiv.textContent = minutesLeft;
+  secondDiv.textContent = secondsLeft < 10 ? "0" + secondsLeft : secondsLeft;
 
-  if (minutesLeft === 0 && secondsLeft === 0) {
+  if (totalSeconds <= 0) {
     bells.play();
     clearInterval(myInterval);
   }

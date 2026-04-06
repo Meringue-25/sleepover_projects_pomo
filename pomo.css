@@ -50,7 +50,7 @@ p {
     border: solid 6px;
   }
   
-  .left-side {
+.left-side {
     top: 0;
     left: 0;
     transform-origin: right center;
@@ -61,7 +61,7 @@ p {
     z-index: 1;
   }
   
-  .right-side {
+.right-side {
     top: 0;
     left: 100px;
     transform-origin: left center;
@@ -70,3 +70,20 @@ p {
     border-bottom-right-radius: 100px;
     border-left: none;
   }
+
+.circle {
+    border-color: pink;
+  }
+  
+.circle-mask {
+    border-color: pink;
+  }
+
+.circle {
+    border-color: pink;
+  }
+  
+.circle-mask {
+    border-color: pink;
+  }
+

@@ -9,7 +9,7 @@ const Timer = () => {
 
   if (state) {
     state = false;
-    let totatlSeconds = sessionAmount * 60;
+    let totalSeconds = sessionAmount * 60;
 
     const updateSeconds = () => {};
     myInterval = setInterval(updateSeconds, 1000);
@@ -32,10 +32,12 @@ const updateSeconds = () => {
   } else {
     secondDiv.textContent = secondsLeft;
   }
-  minuteDiv.textContent = secondsLeft;
+  minuteDiv.textContent = minutesLeft;
 
   if (minutesLeft === 0 && secondsLeft === 0) {
     bells.play();
     clearInterval(myInterval);
   }
 };
+
+startBtn.addEventListener("click", Timer);

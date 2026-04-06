@@ -10,5 +10,32 @@ const Timer = () => {
   if (state) {
     state = false;
     let totatlSeconds = sessionAmount * 60;
+
+    const updateSeconds = () => {};
+    myInterval = setInterval(updateSeconds, 1000);
+  } else {
+    alert("Session has already been started.");
+  }
+};
+
+const updateSeconds = () => {
+  const minuteDiv = document.querySelector(".minutes");
+  const secondDiv = document.querySelector(".seconds");
+
+  totalSeconds--;
+
+  let minutesLeft = Math.floor(totalSeconds / 60);
+  let secondsLeft = totalSeconds % 60;
+
+  if (secondsLeft < 10) {
+    secondDiv.textContent = "0" + secondsLeft;
+  } else {
+    secondDiv.textContent = secondsLeft;
+  }
+  minuteDiv.textContent = secondsLeft;
+
+  if (minutesLeft === 0 && secondsLeft === 0) {
+    bells.play();
+    clearInterval(myInterval);
   }
 };

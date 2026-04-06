@@ -76,7 +76,7 @@ p {
   }
   
 .circle-mask {
-    border-color: pink;
+    border-color: rgb(81, 80, 80);
   }
 
 .circle {
@@ -84,7 +84,7 @@ p {
   }
   
 .circle-mask {
-    border-color: pink;
+    border-color: rgb(79, 78, 78);
   }
 
   .timer-counter-box {
